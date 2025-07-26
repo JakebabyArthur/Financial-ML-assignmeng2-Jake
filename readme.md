@@ -15,9 +15,7 @@ This study examines the risk–return trade‑off of a three‑asset portfolio (
 - **Annualized Return (μᵢ):** The expected yearly return of asset _i_, computed as mean daily return × 252.  
 - **Covariance Matrix (Σ):** Matrix of covariances Σᵢⱼ = Cov(rᵢ, rⱼ), used to compute portfolio variance.  
 - **Portfolio Return (𝑟̄):** Weighted average of asset returns:  
-  \[
-    \bar r = \sum_i w_i \mu_i.
-  \]  
+  \[\bar r = \sum_i w_i \mu_i.\]  
 - **Portfolio Risk (σₚ):** Standard deviation of portfolio returns:  
   \[
     \sigma_p = \sqrt{w^T Σ w}.
