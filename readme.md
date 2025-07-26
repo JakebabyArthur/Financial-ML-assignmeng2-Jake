@@ -9,6 +9,26 @@ This study examines the risk–return trade‑off of a three‑asset portfolio (
 
 ---
 
+## Definitions
+
+- **Monte Carlo Simulation:** Repeated random sampling to estimate the behavior of a system—in this case, portfolio returns drawn from a multivariate normal distribution.  
+- **Annualized Return (μᵢ):** The expected yearly return of asset _i_, computed as mean daily return × 252.  
+- **Covariance Matrix (Σ):** Matrix of covariances Σᵢⱼ = Cov(rᵢ, rⱼ), used to compute portfolio variance.  
+- **Portfolio Return (𝑟̄):** Weighted average of asset returns:  
+  \[
+    \bar r = \sum_i w_i \mu_i.
+  \]  
+- **Portfolio Risk (σₚ):** Standard deviation of portfolio returns:  
+  \[
+    \sigma_p = \sqrt{w^T Σ w}.
+  \]  
+- **Quadratic Programming (QP):** Optimization of a quadratic objective with linear constraints.  
+- **Efficient Frontier:** Set of portfolios offering maximum return for a given risk (or minimum risk for a given return).  
+- **Long‑Only:** Constraint wᵢ ≥ 0 (no shorts).  
+- **Long + Short:** wᵢ unconstrained with only ∑ᵢ wᵢ = 1.
+
+---
+
 ## Introduction & Overview
 
 This project analyzes the risk–return trade‑off of a three‑asset portfolio comprising:
