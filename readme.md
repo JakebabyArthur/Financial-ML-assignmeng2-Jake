@@ -116,10 +116,10 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 
 ## Discussion
 
-1. **Diversification benefit:** Combining low‑, medium‑, and high‑vol assets yields portfolios with lower risk than single‐asset positions.
-2. **Impact of shorting:** Permitting short positions unlocks additional return streams, compressing the frontier toward lower risk.
-3. **Monte Carlo vs. QP:** Most random portfolios lie >5% away from the frontier, underscoring the importance of formal optimization.
-4. **Solver behavior:** At very high return targets (R > 0.7), the QP occasionally fails to converge—our frontier reflects the feasible region.
+**Diversification benefit:** Combining low‑, medium‑, and high‑vol assets yields portfolios with lower risk than single‐asset positions.
+**Impact of shorting:** Permitting short positions unlocks additional return streams, compressing the frontier toward lower risk.
+**Monte Carlo vs. QP:** Most random portfolios lie >5% away from the frontier, underscoring the importance of formal optimization.
+**Solver behavior:** At very high return targets (R > 0.7), the QP occasionally fails to converge—our frontier reflects the feasible region.
 
 ---
 
