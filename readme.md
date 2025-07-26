@@ -1,6 +1,6 @@
 # Portfolio Optimization Study: JNJ · JPM · TSLA
 
-**Author:** Hongduo,SHAN\
+Hongduo,SHAN\
 **Date:** July 17, 2025
 
 ---
