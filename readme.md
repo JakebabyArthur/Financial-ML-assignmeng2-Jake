@@ -4,6 +4,10 @@
 **Date:** July 17, 2025
 
 ---
+## Summary
+This study examines the risk–return trade‑off of a three‑asset portfolio (JNJ, JPM, TSLA) by combining Monte Carlo simulation and quadratic programming. We simulated 5 000 annual return scenarios, generated 2 000 random portfolios under long‑only and long + short regimes, and computed their sample mean returns and risks to visualize opportunity sets. We then solved a constrained quadratic program to trace the precise efficient frontier in each regime. The results highlight how short positions widen the feasible set and shift the frontier toward lower risk for a given return, underscoring the value of formal optimization in portfolio construction.
+
+---
 
 ## Introduction & Overview
 
