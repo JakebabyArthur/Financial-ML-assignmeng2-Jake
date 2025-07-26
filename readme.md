@@ -113,39 +113,4 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 
 ---
 
-## Repo Structure
-
-```
-/  
-├─ README.md                # this report  
-├─ assignment2.py           # simulation & optimization code  
-├─ images/                  # figures  
-│   ├─ opportunity_sets.png  
-│   └─ monte_carlo_frontier.png  
-└─ data/                    # raw data (optional)  
-   └─ prices.csv
-```
-
----
-
-## Appendix: Key Code Snippets
-
-```python
-# Simulate return scenarios
-sim_rets = np.random.multivariate_normal(μ, Σ, size=5000)
-
-# Draw random weights
-def random_weights(n, shorts_ok): ...
-
-# Solve one QP for target return t
-def solve_qp(t):
-    cons = [
-        {'type':'eq', 'fun': lambda w: np.sum(w)-1},
-        {'type':'eq', 'fun': lambda w, t=t: w.dot(μ)-t}
-    ]
-    sol = minimize(lambda w: w.T @ Σ @ w, w0, constraints=cons)
-    return sol
-```
-
-Expand as needed for full code listings or tables of optimal weights. Feel free to iterate!
 
