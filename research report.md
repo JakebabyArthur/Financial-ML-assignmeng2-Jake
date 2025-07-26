@@ -99,6 +99,13 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 - **Left (Long + Short):** Risk 0.25–2.0, Return –0.4–1.8.
 - **Right (Long‑Only):** Risk 0.20–0.65, Return 0.10–0.65.
 - Allowing shorts **widens** the feasible set substantially.
+<div align="center">
+  <img src="images/opportunity_sets.png" width="80%" alt="MC Opportunity Sets"/>
+</div>
+…
+<div align="center">
+  <img src="images/monte_carlo_frontier.png" width="70%" alt="Efficient Frontier"/>
+</div>
 
 ### Efficient Frontiers
 
