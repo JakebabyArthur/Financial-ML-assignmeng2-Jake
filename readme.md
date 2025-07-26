@@ -1,11 +1,11 @@
 # Portfolio Optimization Study: JNJ · JPM · TSLA
 
-**Author:** Your Name\
-**Date:** July 25, 2025
+**Author:** Hongduo,SHAN\
+**Date:** July 17, 2025
 
 ---
 
-## 📄 Overview
+## Introduction & Overview
 
 This project analyzes the risk–return trade‑off of a three‑asset portfolio comprising:
 
@@ -22,7 +22,7 @@ Results highlight how allowing short positions shifts the frontier and reduces p
 
 ---
 
-## 🗂️ Data & Inputs
+## Data & Inputs
 
 - **Period:** 2020‑01‑01 through 2025‑07‑25
 - **Data source:** Yahoo Finance via `yfinance`
@@ -40,7 +40,7 @@ Annualized estimates:
 
 ---
 
-## 🛠️ Methodology
+## Methodology
 
 ### 1. Monte Carlo Simulation
 
@@ -58,7 +58,7 @@ Annualized estimates:
      \(σ_p = \sqrt{w^T Σ w}\)
 5. **Plot** risk vs. return to visualize the opportunity sets.
 
-### 2. Efficient Frontier (Quadratic Programming)
+### 2. Efficient Frontier
 
 For each target return R\_t on a grid, solve:
 
@@ -74,7 +74,7 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 
 ---
 
-## 📊 Results
+## Results
 
 ### Opportunity Sets
 
@@ -96,7 +96,7 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 
 ---
 
-## 🔍 Discussion
+## Discussion
 
 1. **Diversification benefit:** Combining low‑, medium‑, and high‑vol assets yields portfolios with lower risk than single‐asset positions.
 2. **Impact of shorting:** Permitting short positions unlocks additional return streams, compressing the frontier toward lower risk.
@@ -105,7 +105,7 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 
 ---
 
-## 🏁 Conclusion
+## Conclusion
 
 - **Short positions** meaningfully **improve** risk–return trade‑offs.
 - **Quadratic programming** identifies portfolios that dominate the bulk of random allocations.
@@ -113,7 +113,7 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 
 ---
 
-## 📁 Repo Structure
+## Repo Structure
 
 ```
 /  
@@ -128,7 +128,7 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 
 ---
 
-## 📌 Appendix: Key Code Snippets
+## Appendix: Key Code Snippets
 
 ```python
 # Simulate return scenarios
