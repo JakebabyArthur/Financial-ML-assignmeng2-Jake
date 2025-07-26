@@ -18,7 +18,7 @@ We use two complementary approaches:
 1. **Monte Carlo Simulation** — generate random portfolios under long‑only and long + short constraints to visualize the opportunity set.
 2. **Quadratic Programming** — compute the precise efficient frontier for each constraint regime.
 
-Results highlight how allowing short positions shifts the frontier and reduces portfolio risk for a given return.
+The Results highlight how allowing short positions shifts the frontier and reduces portfolio risk for a given return.
 
 ---
 
