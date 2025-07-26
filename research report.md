@@ -102,16 +102,16 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 <div align="center">
   <img src="images/opportunity_sets.png" width="80%" alt="MC Opportunity Sets"/>
 </div>
-…
-<div align="center">
-  <img src="images/monte_carlo_frontier.png" width="70%" alt="Efficient Frontier"/>
-</div>
 
 ### Efficient Frontiers
 
 - **Red:** Long + Short frontier
 - **Green dashed:** Long‑only frontier
 - Shorts shift the frontier **left**, lowering risk for the same return.
+- 
+<div align="center">
+  <img src="images/monte_carlo_frontier.png" width="70%" alt="Efficient Frontier"/>
+</div>
 
 **Illustrative point:** For R\_t = 30%:
 
