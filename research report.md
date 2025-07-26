@@ -31,6 +31,7 @@ This project analyzes the risk–return trade‑off of a three‑asset portfolio
 - **JPMorgan Chase (JPM)** — cyclical, medium volatility
 - **Tesla (TSLA)** — growth, high volatility
 
+We picked JNJ, JPM and TSLA because they span low, medium and high volatility (defensive staples, financials and high‑beta growth), giving a diversified mix of risk profiles and correlations that clearly illustrates how shorting shifts the efficient frontier.
 We use two complementary approaches:
 
 1. **Monte Carlo Simulation** — generate random portfolios under long‑only and long + short constraints to visualize the opportunity set.
@@ -61,6 +62,7 @@ Annualized estimates:
 ## Methodology
 
 ### 1. Monte Carlo Simulation
+A numerical method that generates thousands of random return scenarios—drawn from the estimated multivariate distribution of asset returns—to map out the full risk–return landscape of possible portfolios.
 
 1. **Estimate μ and Σ** from historical daily returns:
    - μᵢ = 252 × E[r\_{i,t}]
@@ -77,7 +79,7 @@ Annualized estimates:
 5. **Plot** risk vs. return to visualize the opportunity sets.
 
 ### 2. Efficient Frontier
-
+The curve of portfolios that, for each target return, achieves the lowest possible volatility (or, equivalently, for each risk level, maximizes expected return), obtained by solving a constrained quadratic optimization problem.
 For each target return R\_t on a grid, solve:
 
 $$
@@ -118,6 +120,11 @@ Use SciPy’s SLSQP solver to obtain the minimum‐variance σ for each R\_t, tr
 - σ\_{LS} ≈ 0.35
 - σ\_{LO} ≈ 0.40\
   → **\~14%** risk reduction when shorts are allowed.
+
+
+In our Monte Carlo simulation, allowing short positions produces a sprawling “fan” of portfolios with annualized returns ranging from about –40% up to nearly 180% and volatilities between roughly 25% and 200%, whereas the long‑only cloud is confined to a much narrower slice—returns of 10%–65% and risks of 20%–65%. When we overlay the efficient frontiers, the red curve (long + short) traces the exact upper‑left boundary of the blue scatter, marking the minimum‐variance portfolios for each return target; the green dashed long‑only frontier lies consistently to its right, meaning that to achieve, say, a 30% expected return you must accept about 40% volatility if shorts are forbidden versus only ~35% when they’re permitted (a ~14% risk reduction). High‐beta TSLA allocations drive the extreme high‑risk, high‑return tail, while low‐vol JNJ anchors the safe end of the spectrum; JPM’s medium volatility helps fill out the middle. 
+These results quantify how shorting extends the opportunity set, shifts the frontier toward lower‐risk solutions, and underscores the value of formal optimization over random or constrained‐only allocation.
+
 
 ---
 
